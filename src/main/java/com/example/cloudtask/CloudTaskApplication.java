@@ -9,7 +9,6 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
 
 @SpringBootApplication
-@EnableBinding({Sink.class, Barista.class})
 public class CloudTaskApplication {
 	Logger Log = LoggerFactory.getLogger(CloudTaskApplication.class);
 
@@ -17,22 +16,6 @@ public class CloudTaskApplication {
 		SpringApplication.run(CloudTaskApplication.class, args);
 	}
 
-	@StreamListener(Sink.INPUT)
-	public void logSink(Object input){
-		Log.info("received message123s :" + input);
-	}
 
-//	@StreamListener(Barista.INPUT)
-//	public void processOrder(Object order){
-//		Log.info("received orders: " + order);
-//	}
-
-//	@StreamListener
-//	@Output("hotDrinks")
-//	public void receiveOrders(@Input(Barista.INPUT) Flux input,
-//							  @Output("hotOrders")FluxSender output){
-//		// return input.map(s -> s.toUpperCase());
-//		output.send(input.map(s -> s.toUpperCase()));
-//	}
 
 }

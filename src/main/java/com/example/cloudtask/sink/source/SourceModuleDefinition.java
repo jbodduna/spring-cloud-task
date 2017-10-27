@@ -1,4 +1,4 @@
-package com.example.cloudtask.source;
+package com.example.cloudtask.sink.source;
 
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;

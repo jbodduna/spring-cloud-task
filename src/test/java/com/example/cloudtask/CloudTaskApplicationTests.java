@@ -12,12 +12,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = CloudTaskApplication.class)
 public class CloudTaskApplicationTests {
 
-	@Autowired
-	private Sink sink;
-
 	@Test
 	public void contextLoads() {
-		Assert.assertNotNull(this.sink.input());
 	}
 
 }
